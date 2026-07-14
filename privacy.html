@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy policy for the AI Deadline Dog Chrome extension." />
+  <title>Privacy Policy — AI Deadline Dog</title>
+  <style>
+    :root {
+      --bg: #faf6ef; --card: #ffffff; --fg: #221c14; --muted: #6f6355;
+      --accent: #e8833a; --accent-deep: #c95f16; --border: #eadfce;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #191512; --card: #241e18; --fg: #f3ede4; --muted: #b0a394; --border: #3a3128; }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body { font: 16px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
+    .shell { max-width: 720px; margin: 0 auto; padding: 24px 22px 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--fg); text-decoration: none; margin-bottom: 34px; }
+    h1 { font-size: 30px; letter-spacing: -.015em; }
+    .date { color: var(--muted); font-size: 14px; margin: 6px 0 26px; }
+    h2 { font-size: 19px; margin: 28px 0 8px; }
+    p, li { color: var(--fg); }
+    ul { margin: 8px 0 8px 20px; }
+    a { color: var(--accent-deep); }
+    @media (prefers-color-scheme: dark) { a { color: var(--accent); } }
+    table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 14.5px; }
+    th, td { text-align: left; border: 1px solid var(--border); padding: 8px 10px; }
+    th { background: var(--card); }
+    .callout { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin: 14px 0; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
+        <circle cx="32" cy="32" r="32" fill="#e8833a"/>
+        <g transform="translate(32 34) scale(1.15) translate(-32 -31)">
+          <path d="M14 18 Q8 4 18 8 L26 14 Z" fill="#b5651d"/>
+          <path d="M50 18 Q56 4 46 8 L38 14 Z" fill="#b5651d"/>
+          <circle cx="32" cy="30" r="20" fill="#e8a552"/>
+          <circle cx="24" cy="26" r="3" fill="#2d2013"/>
+          <circle cx="40" cy="26" r="3" fill="#2d2013"/>
+          <ellipse cx="32" cy="36" rx="9" ry="7" fill="#f7dcb4"/>
+          <ellipse cx="32" cy="33" rx="3.4" ry="2.6" fill="#2d2013"/>
+        </g>
+      </svg>
+      AI Deadline Dog
+    </a>
+
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: July 12, 2026</p>
+
+    <p>
+      AI Deadline Dog ("the extension") finds dates and deadlines on webpages you
+      visit and helps you add them to your calendar.
+    </p>
+
+    <div class="callout">
+      The extension does not collect, transmit, store remotely, or share any data.
+    </div>
+
+    <h2>Data collection</h2>
+    <ul>
+      <li>All webpage analysis (date detection and classification) runs <strong>locally in your browser</strong>. Page content never leaves your device.</li>
+      <li>The extension makes <strong>no network requests</strong> to any server operated by us or by third parties. It contains no analytics, no telemetry, and no error reporting.</li>
+      <li>No account or sign-up exists.</li>
+    </ul>
+
+    <h2>Data stored locally</h2>
+    <p>
+      The following is stored only in your browser's extension storage
+      (<code>chrome.storage.local</code>) and never transmitted:
+    </p>
+    <ul>
+      <li>Your preferences (language, dark mode, highlight and mascot settings, per-site dark-theme choices).</li>
+      <li>Deadlines you choose to track for the countdown badge (title, date, time zone, and the address of the page they came from).</li>
+    </ul>
+    <p>Uninstalling the extension deletes all of this data.</p>
+
+    <h2>Calendar integration</h2>
+    <ul>
+      <li><strong>Google Calendar:</strong> "Add to Google Calendar" opens a standard <code>calendar.google.com</code> tab prefilled with the event you reviewed. This is a normal page navigation in your own browser session; the extension has no access to your Google account, calendar, or credentials.</li>
+      <li><strong>.ics download:</strong> calendar files are generated locally and saved through your browser's regular download mechanism.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <table>
+      <tr><th>Permission</th><th>Purpose</th></tr>
+      <tr><td><code>storage</code></td><td>Save your preferences and tracked deadlines on your device</td></tr>
+      <tr><td><code>sidePanel</code></td><td>Show the review panel UI</td></tr>
+      <tr><td><code>activeTab</code> / <code>scripting</code></td><td>Read the page you are viewing to detect dates on it, when you invoke the extension</td></tr>
+      <tr><td><code>alarms</code></td><td>Refresh the countdown badge hourly so the day count stays accurate</td></tr>
+    </table>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy ever changes (for example, if a future version adds an
+      optional online feature), the change will be described in the extension's
+      changelog and on this page before release.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Questions: please open an issue on the project's repository.</p>
+  </div>
+</body>
+</html>

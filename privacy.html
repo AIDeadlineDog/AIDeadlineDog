@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy policy for the AI Deadline Dog Chrome extension." />
-  <title>Privacy Policy — AI Deadline Dog</title>
+  <meta name="description" content="Privacy policy for the Deadline Dog Chrome extension." />
+  <title>Privacy Policy — Deadline Dog</title>
   <style>
     :root {
       --bg: #faf6ef; --card: #ffffff; --fg: #221c14; --muted: #6f6355;
@@ -45,19 +45,21 @@
           <ellipse cx="32" cy="33" rx="3.4" ry="2.6" fill="#2d2013"/>
         </g>
       </svg>
-      AI Deadline Dog
+      Deadline Dog
     </a>
 
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: July 12, 2026</p>
+    <p class="date">Last updated: July 23, 2026</p>
 
     <p>
-      AI Deadline Dog ("the extension") finds dates and deadlines on webpages you
+      Deadline Dog ("the extension") finds dates and deadlines on webpages you
       visit and helps you add them to your calendar.
     </p>
 
     <div class="callout">
-      The extension does not collect, transmit, store remotely, or share any data.
+      The extension does not transmit, store remotely, sell, or share any data.
+      It processes website content and relevant page addresses only on your
+      device to provide its deadline-detection features.
     </div>
 
     <h2>Data collection</h2>
@@ -74,7 +76,7 @@
     </p>
     <ul>
       <li>Your preferences (language, dark mode, highlight and mascot settings, per-site dark-theme choices).</li>
-      <li>Deadlines you choose to track for the countdown badge (title, date, time zone, and the address of the page they came from).</li>
+      <li>Deadlines you choose to track and a limited, automatically pruned history of deadlines detected on relevant pages (event title, date/time, time zone, and source page address). This powers the countdown badge and missed-deadline safety nudge.</li>
     </ul>
     <p>Uninstalling the extension deletes all of this data.</p>
 
@@ -87,9 +89,10 @@
     <h2>Permissions</h2>
     <table>
       <tr><th>Permission</th><th>Purpose</th></tr>
-      <tr><td><code>storage</code></td><td>Save your preferences and tracked deadlines on your device</td></tr>
+      <tr><td><code>storage</code></td><td>Save preferences, tracked deadlines, and the limited detected-deadline history on your device</td></tr>
       <tr><td><code>sidePanel</code></td><td>Show the review panel UI</td></tr>
-      <tr><td><code>activeTab</code> / <code>scripting</code></td><td>Read the page you are viewing to detect dates on it, when you invoke the extension</td></tr>
+      <tr><td><code>scripting</code></td><td>Inject the packaged scanner into an already-open page when needed</td></tr>
+      <tr><td>Content script on HTTP/HTTPS pages</td><td>Detect deadlines locally on websites; automatic scanning can be disabled</td></tr>
       <tr><td><code>alarms</code></td><td>Refresh the countdown badge hourly so the day count stays accurate</td></tr>
     </table>
 
@@ -100,8 +103,15 @@
       changelog and on this page before release.
     </p>
 
+    <h2>Limited use</h2>
+    <p>
+      Deadline Dog's use of information received from Chrome APIs adheres to
+      the Chrome Web Store User Data Policy, including the Limited Use
+      requirements.
+    </p>
+
     <h2>Contact</h2>
-    <p>Questions: please open an issue on the project's repository.</p>
+    <p>Questions: use the support contact shown on the extension's Chrome Web Store listing or visit <a href="https://aideadlinedog.github.io/AIDeadlineDog/">the Deadline Dog website</a>.</p>
   </div>
 </body>
 </html>

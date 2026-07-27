@@ -19,7 +19,7 @@ never leaves your browser.
 Conference deadlines live on dozens of differently-formatted websites — tables
 on `neurips.cc`, prose CFPs, Jekyll tables on ARR, React apps like OpenReview —
 usually in "Anywhere on Earth" time. Copying them into a calendar by hand is
-error-prone exactly where errors hurt most. AI Deadline Dog reads the page you're
+error-prone exactly where errors hurt most. Deadline Dog reads the page you're
 already looking at and turns its deadlines into calendar events in two clicks.
 
 ## Features

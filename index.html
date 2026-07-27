@@ -34,6 +34,8 @@
     nav { margin-left: auto; display: flex; gap: 20px; font-size: 14px; }
     nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
     nav a:hover { color: var(--accent-deep); }
+    nav a.gh { display: inline-flex; align-items: center; gap: 6px; }
+    nav a.gh svg { fill: currentColor; }
     @media (max-width: 620px) { nav { display: none; } }
 
     /* hero */
@@ -53,6 +55,7 @@
     .btn:hover { transform: translateY(-1px); }
     .btn.primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
     .btn.ghost { border-color: var(--border); color: var(--fg); background: var(--card); }
+    .btn svg { fill: currentColor; }
     .trust { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
     @media (max-width: 780px) { .trust { justify-content: center; } }
     .trust span::before { content: "✓ "; color: var(--green); }
@@ -127,6 +130,22 @@
       padding: 14px 16px; overflow-x: auto; margin-top: 12px;
     }
 
+    /* install */
+    .install-box {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      padding: 26px; margin-top: 22px;
+    }
+    .install-box ol { margin: 0; padding-left: 20px; }
+    .install-box li { margin-bottom: 14px; font-size: 14.5px; }
+    .install-box li:last-child { margin-bottom: 0; }
+    .install-box li strong { font-size: 15px; }
+    .install-box pre { margin-top: 8px; }
+    .install-note { color: var(--muted); font-size: 13.5px; margin-top: 18px; }
+    kbd {
+      font: inherit; font-weight: 700; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 6px; padding: 1px 6px;
+    }
+
     footer { border-top: 1px solid var(--border); margin-top: 30px; padding: 26px 0 40px; color: var(--muted); font-size: 13.5px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
     footer .brand { font-size: 15px; }
     footer nav { margin-left: auto; display: flex; }
@@ -153,13 +172,17 @@
             <path d="M26 15 Q32 11 38 15" stroke="#c98a3b" stroke-width="2" fill="none" stroke-linecap="round"/>
           </g>
         </svg>
-        Deadline Dog
+        AI Deadline Dog
       </a>
       <nav aria-label="Main">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
         <a href="#privacy">Privacy</a>
         <a href="#install">Install</a>
+        <a class="gh" href="https://github.com/AIDeadlineDog/AIDeadlineDog/tree/main" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub
+        </a>
       </nav>
     </header>
 
@@ -167,12 +190,15 @@
       <div>
         <h1>Never miss a<br /><em>conference deadline</em> again.</h1>
         <p class="lede">
-          Deadline Dog finds dates and deadlines on any webpage — great for AI
+          AI Deadline Dog finds dates and deadlines on any webpage — great for AI
           conference pages — and adds them to your calendar in two clicks.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="https://chromewebstore.google.com/detail/deadline-dog-%E2%80%94-fechas-al/ipllicdjdefjbiejcoaejcjimaknlael">Add to Chrome <span aria-hidden="true">→</span></a>
-          <a class="btn ghost" href="#how">See how it works</a>
+          <a class="btn primary" href="#install">Install from source <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="https://github.com/AIDeadlineDog/AIDeadlineDog/tree/main" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            View on GitHub
+          </a>
         </div>
         <div class="trust">
           <span>No sign-up</span>
@@ -287,7 +313,7 @@
             <li>No account, no sign-up, no tracking, no analytics.</li>
             <li>Page content is analyzed on your device and never transmitted anywhere.</li>
             <li>No network requests to any server — verifiable in the source.</li>
-            <li>Three minimal permissions: storage, side panel, active tab.</li>
+            <li>Only the permissions needed to save settings and deadlines, show the panel, scan pages locally, and refresh the countdown.</li>
           </ul>
           <p style="margin-top:10px; font-size:14px;"><a href="privacy.html">Read the full privacy policy →</a></p>
         </div>
@@ -296,15 +322,43 @@
 
     <section id="install">
       <span class="kicker">Install</span>
-      <h2>Get Deadline Dog.</h2>
-      <p class="sub"><strong>Chrome Web Store:</strong> coming soon — the extension is submitted for review. Until then, install from source in under a minute:</p>
-      <pre>git clone &lt;your-repo-url&gt; deadline-dog
-cd deadline-dog &amp;&amp; npm install &amp;&amp; npm run build</pre>
-      <p class="sub" style="margin-top:12px">
-        Then open <code>chrome://extensions</code>, enable <strong>Developer mode</strong>,
-        click <strong>Load unpacked</strong>, and select the <code>dist</code> folder.
-        Visit a conference page and listen for the woof. 🐾
-      </p>
+      <h2>Get AI Deadline Dog.</h2>
+      <p class="sub">The extension is open source (MIT). Build it from the repository and load it
+        into Chrome as an unpacked extension — it takes about a minute.</p>
+
+      <div class="install-box">
+        <ol>
+          <li>
+            <strong>Get the code.</strong> Clone the repository (or download the ZIP from
+            <a href="https://github.com/AIDeadlineDog/AIDeadlineDog/tree/main" target="_blank" rel="noopener">GitHub</a>).
+<pre>git clone https://github.com/AIDeadlineDog/AIDeadlineDog.git
+cd AIDeadlineDog</pre>
+          </li>
+          <li>
+            <strong>Build it.</strong> Requires Node.js. The bundle is written to <code>dist/</code>.
+<pre>npm install
+npm run build</pre>
+          </li>
+          <li>
+            <strong>Load it into Chrome.</strong> Open <code>chrome://extensions</code>, turn on
+            <kbd>Developer mode</kbd>, click <kbd>Load unpacked</kbd>, and select the
+            <code>dist/</code> folder.
+          </li>
+          <li>
+            <strong>Try it.</strong> Visit a conference "important dates" page — NeurIPS, ICML,
+            ACL, CVPR — and listen for the woof. 🐾
+          </li>
+        </ol>
+        <p class="install-note">Works in Chrome and other Chromium browsers (Edge, Brave, Vivaldi).
+          Everything runs locally — no keys, no accounts, no build-time services.</p>
+      </div>
+
+      <div class="cta-row" style="margin-top:22px">
+        <a class="btn primary" href="https://github.com/AIDeadlineDog/AIDeadlineDog/tree/main" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          View the source on GitHub
+        </a>
+      </div>
     </section>
 
     <footer>
@@ -325,6 +379,11 @@ cd deadline-dog &amp;&amp; npm install &amp;&amp; npm run build</pre>
       </a>
       <span>Important dates, right where they belong.</span>
       <nav>
+        <a class="gh" href="https://github.com/AIDeadlineDog/AIDeadlineDog/tree/main" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub
+        </a>
+        <a href="LICENSE">MIT License</a>
         <a href="privacy.html">Privacy policy</a>
       </nav>
     </footer>

@@ -1,0 +1,28 @@
+:root {
+  --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --border: #e7e5e4;
+  --card: #fff; --accent: #e8833a;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1c1917; --fg: #f5f5f4; --muted: #a8a29e; --border: #44403c; --card: #292524; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.6 system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
+h1 { font-size: 20px; }
+section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin: 16px 0; }
+h2 { font-size: 15px; margin: 0 0 10px; }
+.badge { font-size: 11px; font-weight: 600; background: var(--border); border-radius: 999px; padding: 2px 8px; vertical-align: middle; }
+label { display: block; margin: 10px 0; font-size: 13px; color: var(--muted); }
+label.row { display: flex; align-items: center; gap: 8px; color: var(--fg); }
+input:not([type='checkbox']), select {
+  display: block; width: 100%; margin-top: 4px; font: inherit; padding: 7px 9px;
+  border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--fg);
+}
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid #4a90d9; }
+.hint { font-size: 13px; color: var(--muted); }
+code { background: var(--border); padding: 2px 6px; border-radius: 6px; font-size: 12px; word-break: break-all; }
+button { font: inherit; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--fg); padding: 8px 16px; cursor: pointer; }
+button.small { padding: 2px 8px; font-size: 12px; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.save-row { display: flex; align-items: center; gap: 12px; }
+#saved { color: #16a34a; font-size: 13px; }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Deadline Dog — Options</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <h1><img src="icons/icon48.png" alt="" width="24" height="24" style="vertical-align:-3px;border-radius:50%" /> AI Deadline Dog — Options</h1>
+
+    <section>
+      <h2>General</h2>
+      <label>Language / 言語 / Idioma
+        <select id="language">
+          <option value="auto">Auto (browser language)</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="es">Español</option>
+        </select>
+      </label>
+      <label>Theme
+        <select id="darkMode">
+          <option value="system">Follow system</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="darker">Darker (Dark Reader style)</option>
+          <option value="dracula">Dracula</option>
+          <option value="github-dark">GitHub Dark</option>
+          <option value="tokyo-night">Tokyo Night</option>
+        </select>
+      </label>
+      <label class="row"><input type="checkbox" id="autoScan" /> Automatically scan pages for dates</label>
+      <label class="row"><input type="checkbox" id="strictMode" /> Only activate on conference / deadline pages (recommended)</label>
+      <label class="row"><input type="checkbox" id="highlightDates" /> Highlight detected dates on pages</label>
+      <label class="row"><input type="checkbox" id="mascotEnabled" /> Show the dog mascot</label>
+      <label class="row"><input type="checkbox" id="mascotMuted" /> Mute mascot notifications</label>
+      <label>Remind me before booked deadlines (days, comma-separated)
+        <input id="reminderDays" placeholder="7, 1" spellcheck="false" />
+      </label>
+      <label>Ambiguous numeric dates (05/06/2026)
+        <select id="numericDateOrder">
+          <option value="MDY">Month/Day/Year (US)</option>
+          <option value="DMY">Day/Month/Year</option>
+        </select>
+      </label>
+    </section>
+
+    <div class="save-row">
+      <button id="save" class="primary">Save</button>
+      <span id="saved" role="status" aria-live="polite"></span>
+    </div>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

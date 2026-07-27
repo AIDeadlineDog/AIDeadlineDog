@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Deadline Dog</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-actions">
+      <button id="btn-rescan" class="icon-btn" title="Rescan page" aria-label="Rescan page">↻</button>
+      <button id="btn-theme" class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <button id="btn-options" class="icon-btn" title="Options" aria-label="Open options">⚙️</button>
+    </div>
+  </header>
+
+  <section class="controls">
+    <label class="toggle"><input type="checkbox" id="chk-important" checked /> <span id="lbl-important">Only important deadlines</span></label>
+    <label class="toggle"><input type="checkbox" id="chk-highlight" /> <span id="lbl-highlight">Highlight dates on page</span></label>
+    <label class="toggle"><input type="checkbox" id="chk-pagedark" /> <span id="lbl-pagedark">Dark theme for this site</span></label>
+  </section>
+
+  <div class="selection-actions">
+    <button id="select-all" class="text-btn">Select all</button>
+    <button id="clear-all" class="text-btn">Clear</button>
+  </div>
+
+  <div id="status" role="status" aria-live="polite"></div>
+  <div id="gated-row" hidden>
+    <button id="btn-scan-anyway" class="btn small secondary">Scan anyway</button>
+  </div>
+
+  <details id="tracked-sec" hidden>
+    <summary id="tracked-title">⏰ Tracked deadlines</summary>
+    <div id="tracked-list"></div>
+  </details>
+
+  <main id="list" aria-label="Detected dates"></main>
+
+  <footer class="footer">
+    <button id="btn-add" class="btn primary" disabled>Add selected to Google Calendar</button>
+    <div class="footer-row">
+      <button id="btn-ics" class="btn secondary" disabled>⬇ .ics file</button>
+      <button id="btn-ics-sep" class="btn secondary" disabled>⬇ Separate files</button>
+    </div>
+  </footer>
+
+  <template id="tpl-event">
+    <article class="event">
+      <div class="event-head">
+        <input type="checkbox" class="ev-select" aria-label="Select event" />
+        <span class="ev-cat"></span>
+        <span class="ev-conf" title="Detection confidence"></span>
+        <button class="ev-track icon-btn" aria-label="Track this deadline">🔔</button>
+        <button class="ev-expand icon-btn" aria-label="Edit event details" aria-expanded="false">✏️</button>
+      </div>
+      <input class="ev-title" aria-label="Event title" />
+      <div class="ev-when"></div>
+      <label class="ev-week"><input type="checkbox" class="ev-weekrem" /> <span class="ev-week-text">⏰ Remind me 1 week before</span></label>
+      <div class="ev-context"></div>
+      <div class="ev-edit" hidden>
+        <label>Date <input type="date" class="ev-start" /></label>
+        <label>End <input type="date" class="ev-end" /></label>
+        <label>Time <input type="time" class="ev-time" /></label>
+        <label>Time zone
+          <select class="ev-tz">
+            <option value="">Local time</option>
+            <option value="Etc/GMT+12">AoE (UTC-12)</option>
+            <option value="UTC">UTC</option>
+            <option value="America/New_York">Eastern (US)</option>
+            <option value="America/Chicago">Central (US)</option>
+            <option value="America/Denver">Mountain (US)</option>
+            <option value="America/Los_Angeles">Pacific (US)</option>
+            <option value="Europe/London">London</option>
+            <option value="Europe/Paris">Central Europe</option>
+            <option value="Asia/Tokyo">Japan</option>
+            <option value="Asia/Shanghai">China</option>
+            <option value="Asia/Kolkata">India</option>
+            <option value="Australia/Sydney">Sydney</option>
+          </select>
+        </label>
+        <label class="wide">Notes <textarea class="ev-desc" rows="2"></textarea></label>
+        <button class="ev-open btn small secondary">Open in Google Calendar ↗</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="panel.js"></script>
+</body>
+</html>

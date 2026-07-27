@@ -1,0 +1,7 @@
+/* Highlight styling for detected dates (CSS Custom Highlight API). */
+::highlight(dd-dates) {
+  background-color: rgba(232, 131, 58, 0.35);
+  text-decoration: underline;
+  text-decoration-color: #e8833a;
+  text-decoration-thickness: 2px;
+}

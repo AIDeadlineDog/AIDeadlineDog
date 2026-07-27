@@ -1,8 +1,8 @@
-# <img src="icons/icon128.png" alt="AI Deadline Dog logo" width="52" align="center"> AI Deadline Dog — Dates to Calendar
+# <img src="icons/icon128.png" alt="AI Deadline Dog logo" width="52" align="center"> Deadline Dog — Dates to Calendar
 
 [![Website](https://img.shields.io/badge/website-live-2ea44f)](https://aideadlinedog.github.io/AIDeadlineDog/)
 ![Project status](https://img.shields.io/badge/status-active-2ea44f)
-![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-ready_to_submit-f59e0b)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Install_Now-f59e0b?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/deadline-dog-%E2%80%94-dates-to-c/ipllicdjdefjbiejcoaejcjimaknlael)
 ![Version](https://img.shields.io/badge/version-1.0.2-2563eb)
 ![Manifest](https://img.shields.io/badge/manifest-V3-4285f4)
 [![License](https://img.shields.io/badge/license-MIT-7c3aed)](LICENSE)
